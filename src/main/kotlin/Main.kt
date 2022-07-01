@@ -1,5 +1,7 @@
 fun main(args: Array<String>) {
 
+    println("input should not be fraction")
+
     print("enter the first number:")
     val firstNo : String = readln()!!
 
@@ -29,4 +31,5 @@ fun main(args: Array<String>) {
   //  val res : Int = firstNo.toInt() - secondNo.toInt()
 
     println("Result is: $res")
+
 }
