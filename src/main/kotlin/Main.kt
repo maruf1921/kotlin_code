@@ -1,45 +1,44 @@
 fun main(args: Array<String>) {
 
-    do{
-        print("enter the first number:")
-        val firstNo : String = readln()!!
+    run myReturn@{
 
-        println("pleas enter your operator:")
-        val operator : String = readLine()!!
+        do{
+            print("enter the first number:")
+            val firstNo : String = readln()!!
 
-
-        println("enter the second number:")
-        val secondNo : String = readln()!!
-
-        var res : Int = 0
-        when (operator){
-
-            "+" ->{
-                res = firstNo.toInt() + secondNo.toInt()
-            }
-            "-" ->{
-                res = firstNo.toInt() - secondNo.toInt()
-            }
-            "*" ->{
-                res = firstNo.toInt() * secondNo.toInt()
-            }
-            "/" ->{
-                res = firstNo.toInt() / secondNo.toInt()
-            }
-            else ->{
-                println("operator error !")
+            if (firstNo=="exit"){
+                return@myReturn
             }
 
-        }
+            println("pleas enter your operator:")
+            val operator : String = readLine()!!
 
 
+            println("enter the second number:")
+            val secondNo : String = readln()!!
 
+            var res : Double = 0.0
+            when (operator){
 
-        //  val res : Int = firstNo.toInt() - secondNo.toInt()
+                "+" ->{
+                    res = firstNo.toDouble()+ secondNo.toDouble()
+                }
+                "-" ->{
+                    res = firstNo.toDouble() - secondNo.toDouble()
+                }
+                "*" ->{
+                    res = firstNo.toDouble() * secondNo.toDouble()
+                }
+                "/" ->{
+                    res = firstNo.toDouble() / secondNo.toDouble()
+                }
+                else ->{
+                    println("operator error !")
+                }
 
-        println("Result is: $res")
-    }while(true)
-
-
+            }
+            println("Result is: $res")
+        }while(true)
+    }
 
 }
