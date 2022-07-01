@@ -1,35 +1,45 @@
 fun main(args: Array<String>) {
 
-    println("input should not be fraction")
+    do{
+        print("enter the first number:")
+        val firstNo : String = readln()!!
 
-    print("enter the first number:")
-    val firstNo : String = readln()!!
-
-    println("pleas enter your operator:")
-    val operator : String = readLine()!!
+        println("pleas enter your operator:")
+        val operator : String = readLine()!!
 
 
-    println("enter the second number:")
-    val secondNo : String = readln()!!
+        println("enter the second number:")
+        val secondNo : String = readln()!!
 
-    var res : Int = 0
-    if (operator ==  "+"){
-        res = firstNo.toInt() + secondNo.toInt()
-    }
-    else if (operator == "-" ){
-        res = firstNo.toInt() - secondNo.toInt()
-    }
-    else if (operator == "*" ){
-        res = firstNo.toInt() * secondNo.toInt()
-    }
-    else if (operator == "/" ){
-        res = firstNo.toInt() / secondNo.toInt()
-    }else {
-        println("operator error !")
-    }
+        var res : Int = 0
+        when (operator){
 
-  //  val res : Int = firstNo.toInt() - secondNo.toInt()
+            "+" ->{
+                res = firstNo.toInt() + secondNo.toInt()
+            }
+            "-" ->{
+                res = firstNo.toInt() - secondNo.toInt()
+            }
+            "*" ->{
+                res = firstNo.toInt() * secondNo.toInt()
+            }
+            "/" ->{
+                res = firstNo.toInt() / secondNo.toInt()
+            }
+            else ->{
+                println("operator error !")
+            }
 
-    println("Result is: $res")
+        }
+
+
+
+
+        //  val res : Int = firstNo.toInt() - secondNo.toInt()
+
+        println("Result is: $res")
+    }while(true)
+
+
 
 }
